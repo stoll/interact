@@ -1,4 +1,4 @@
-var path = require('path');
+let path = require('path');
 const fs = require('fs');
 
 const lessToJs = require('less-vars-to-js');
@@ -6,18 +6,21 @@ const themeVariables = lessToJs(fs.readFileSync(path.join(__dirname, './ant-over
 
 module.exports = {
     mode: "development",
-    entry: "./src/app.jsx", // входная точка - исходный файл
+    entry: "./src/app.jsx", // entry point - source file
     output: {
-        path: path.resolve(__dirname, './public'),     // путь к каталогу выходных файлов - папка public
+        path: path.resolve(__dirname, './public'),     // path to output directory - public folder
         publicPath: '/public/',
-        filename: "bundle.js"       // название создаваемого файла
+        filename: "bundle.js"       // name of the created file
+    },
+    node: {
+        fs: "empty"
     },
     module: {
         rules: [
             {
-                test: /\.jsx?$/, // определяем тип файлов
-                exclude: /(node_modules)/,  // исключаем из обработки папку node_modules
-                loader: "babel-loader",   // определяем загрузчик
+                test: /\.jsx?$/, // determine the file type
+                exclude: /(node_modules)/,  // exclude the node_modules folder from processing
+                loader: "babel-loader",   // define the loader
                 options: {
                     presets: ["@babel/preset-env", "@babel/preset-react"],
                     plugins: [
@@ -32,7 +35,7 @@ module.exports = {
             {
                 test: /\.css$/,
                 use: [
-                    {loader:'style-loader'}, 
+                    {loader:'style-loader'},
                     {
                         loader: 'css-loader',
                         options: {
