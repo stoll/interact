@@ -1,10 +1,10 @@
 module.exports = {
-    //network selected by default if user's active network wasn't saved
+    // network selected by default if user's active network wasn't saved
     network: {
         defaultNodeKey: 'Mainnet_Infura'
     },
 
-    //defines which elements will be loaded from storage
+    // defines which elements will be loaded from storage
     storage: {
         nodeList: true,
         activeNode: true,
@@ -19,15 +19,13 @@ module.exports = {
         }
     },
 
-    //wallets for donations
     donations: {
         eth: '0xF01Acbaf3e5d2403015ac6E8C2518EfEDdaBC699',
         btc: '1JMpxB35CQvhxGmrhqbh5dbe9LwJT8tU3q'
     },
 
     contacts: {
-        email: 'contact@justsmartcontracts.dev',
-        github: 'https://github.com/olekon/justsmartcontracts'
+        github: 'https://github.com/stoll/interact'
     },
 
     server: {

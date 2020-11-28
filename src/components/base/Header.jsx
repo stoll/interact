@@ -3,7 +3,6 @@ import {Layout, Row, Col} from 'antd';
 import {NavLink} from 'react-router-dom';
 
 import styles from './Header.css';
-//import logo from '../../../public/logo.png';
 
 class Header extends React.Component {
     constructor(props) {
@@ -15,7 +14,7 @@ class Header extends React.Component {
             <Row>
                 <Col span={12}>
                     <p className={styles.headerLogo}>
-                        <NavLink to='/'>JustSmartContracts</NavLink>
+                        <NavLink to='/'>Interact</NavLink>
                     </p>
                 </Col>
                 <Col span={6} push={5}>

@@ -1,8 +1,6 @@
 ## Description
 
-This is source code of [justsmartcontracts.dev](https://justsmartcontracts.dev) website. 
-
-[What is justsmartcontracts.dev?](https://medium.com/coinmonks/introducing-justsmartcontracts-dev-web-tool-for-interacting-with-ethereum-smart-contracts-da9b5dfe563c) Basically it is a web tool for interacting with Ethereum smart contracts. It was initially developed by my friend and me in order to provide a better experience for Ethereum smart contracts developers and blockchain enthusiasts.
+Interact is a simple tool to ease interaction with smart contracts on Ethereum.
 
 ## Prerequisites
 
@@ -46,7 +44,7 @@ npm run build
 
 ### Using local API server
 
-You may want to use local backend application (API server). In that case please visit its [repository](https://github.com/olekon/justsmartcontracts-api) and follow launch instructions. 
+You may want to use local backend application (API server). In that case please visit its [repository](https://github.com/stoll/interact-api) and follow launch instructions. 
 
 Then open this project's `.env` file and locate `SERVER_BASE_URL` variable. Set url to your local API server, for example
 
@@ -59,9 +57,10 @@ SERVER_BASE_URL=http://localhost:8000
 Please see the [CONTRIBUTING.md](./CONTRIBUTING.md) file for details
 
 ## Authors
+
 * Oleg Kondrakhanov - [olekon](https://github.com/olekon)
 * Alexey Kuzmin - [32kaa](https://github.com/32kaa)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](./LICENSE.md) file for details.

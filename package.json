@@ -1,9 +1,9 @@
 {
-  "name": "justsmartcontracts",
+  "name": "interact",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "author": "",
+  "author": "stoll",
   "license": "ISC",
   "scripts": {
     "dev": "webpack-dev-server --hot --open",
