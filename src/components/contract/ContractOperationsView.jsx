@@ -7,15 +7,15 @@ import {checkParamErrors} from '../../scripts/utils.js';
 import {showArgumentsError} from '../common/errorMessage.js';
 
 /**
- * Item of the operations list. 
+ * View of contract's getter function.
  * Props:
- * method - method entry of the ABI array
- * getTx - function that receives method's name and inputs and returns web3 tx object
- *  getTx = (methodName, inputs) => web3tx
+ *      method - element of the abi array for this method
+ *      onFetch - handler function for 'Fetch' button's click event
  */
 class Item extends React.Component {
     constructor(props) {
         super(props);
+
         this.state = {
             tx: null,
             ethValue: 0
@@ -28,7 +28,7 @@ class Item extends React.Component {
     handleInputsClick(inputs, ethValue) {
         const tx =  this.props.getTx(this.props.method.name, inputs);
         const error = checkParamErrors(tx);
-        
+
         if (error == null) {
             this.setState({
                 tx,
@@ -65,7 +65,7 @@ class Item extends React.Component {
 /**
  * List of contract's operations - non-constant methods with parameters
  * Props:
- *      contract - web3.Contract object      
+ *      contract - web3.Contract object
  */
 class ContractOperationsView extends React.Component {
     constructor(props) {
@@ -87,7 +87,7 @@ class ContractOperationsView extends React.Component {
     render() {
         //select only non-constant methods
         let methods = this.props.contract._jsonInterface.filter(
-            item => item.constant === false
+            item => !item.constant && item.type === "function"
         );
 
         return (
@@ -98,7 +98,7 @@ class ContractOperationsView extends React.Component {
                     </Collapse.Panel>
                 ))}
             </Collapse>
-        );
+        )
     }
 }
 
