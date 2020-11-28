@@ -2,6 +2,8 @@
 
 Interact is a simple tool to ease interaction with smart contracts on Ethereum.
 
+Interact is built on top of amazing work done by [olekon on Github](https://github.com/olekon) in [olekon/justsmartcontracts](https://github.com/olekon/justsmartcontracts).
+
 ## Prerequisites
 
 Website was developed using Node.js 8.4.0.
